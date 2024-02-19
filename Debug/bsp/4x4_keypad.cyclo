@@ -1,4 +1,0 @@
-../bsp/4x4_keypad.c:30:6:Keypad4x4_Init	1
-../bsp/4x4_keypad.c:86:6:Keypad4x4_Read	5
-../bsp/4x4_keypad.c:121:13:set_keypad_row	5
-../bsp/4x4_keypad.c:146:13:read_keypad_column	9
