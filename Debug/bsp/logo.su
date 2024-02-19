@@ -1,0 +1,3 @@
+../bsp/logo.c:31:6:destrocore	16	static
+../bsp/logo.c:37:6:fingerprint_icon	16	static
+../bsp/logo.c:43:6:alert_icon	24	static
