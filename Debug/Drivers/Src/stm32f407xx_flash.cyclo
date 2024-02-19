@@ -1,9 +1,0 @@
-../Drivers/Src/stm32f407xx_flash.c:64:6:FLASH_Init	1
-../Drivers/Src/stm32f407xx_flash.c:95:6:DeInit	1
-../Drivers/Src/stm32f407xx_flash.c:126:6:FLASH_Unlock	3
-../Drivers/Src/stm32f407xx_flash.c:151:6:FLASH_Lock	1
-../Drivers/Src/stm32f407xx_flash.c:170:10:FLASH_EraseSector	7
-../Drivers/Src/stm32f407xx_flash.c:236:6:FLASH_Erase	8
-../Drivers/Src/stm32f407xx_flash.c:312:9:FLASH_Write	8
-../Drivers/Src/stm32f407xx_flash.c:389:6:FLASH_Read	2
-../Drivers/Src/stm32f407xx_flash.c:412:6:FLASH_Jump	1
