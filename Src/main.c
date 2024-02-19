@@ -331,7 +331,7 @@ void MainMenu(void)
 /*																										*/
 /* @Note				- Firstly, TemplateNum command packet is sent to R308. This return the current 	*/
 /*						  count of fingerprints saved in R308 FLASH memory. If there is free space in 	*/
-/*						  FLASH memory then the ID of then ID number will be returned for new fingerprint*/
+/*						 FLASH memory then the ID of then ID number will be returned for new fingerprint*/
 /********************************************************************************************************/
 int16_t GetFreeIndex(void)
 {
