@@ -1490,9 +1490,12 @@ DCMI_CWSIZE_Reg_t 	CWSIZE;   /*!< DCMI crop window size,                        
 DCMI_DR_Reg_t 		DR;       /*!< DCMI data register,                            Address offset: 0x28 */
 }DCMI_RegDef_t;
 
+
+
 /**
   * @brief DMA Controller
   */
+
 typedef union{
     uint32_t reg;
     struct{
@@ -1670,58 +1673,20 @@ typedef union{
 
 typedef struct
 {
+DMA_SxCR_Reg_t  	CR;	 	/*!< DMA stream 0 configuration register, 	   	Address offset: 0x10 */
+DMA_SxNDTR_Reg_t 	NDTR; 	/*!< DMA stream 0 number of data register,    	Address offset: 0x14 */
+uint32_t	 	  	PAR;	/*!< DMA stream 0 peripheral address register,  Address offset: 0x18 */
+uint32_t 		  	M0AR; 	/*!< DMA stream 0 memory 0 address register,    Address offset: 0x1C */
+uint32_t 		  	M1AR; 	/*!< DMA stream 0 memory 1 address register,    Address offset: 0x20 */
+DMA_SxFCR_Reg_t 	FCR;  	/*!< DMA stream 0 FIFO control register,  	    Address offset: 0x24 */
+}DMA_Stream_RegDef_t;
+
+typedef struct
+{
 DMA_LISR_Reg_t   LISR;   /*!< DMA low interrupt status register,       	Address offset: 0x00 */
 DMA_HISR_Reg_t   HISR;   /*!< DMA high interrupt status register,      	Address offset: 0x04 */
 DMA_LIFCR_Reg_t  LIFCR;  /*!< DMA low interrupt flag clear register,   	Address offset: 0x08 */
 DMA_HIFCR_Reg_t  HIFCR;  /*!< DMA high interrupt flag clear register,  	Address offset: 0x0C */
-DMA_SxCR_Reg_t	 S0CR;	 /*!< DMA stream 0 configuration register, 	   	Address offset: 0x10 */
-DMA_SxNDTR_Reg_t S0NDTR; /*!< DMA stream 0 number of data register,    	Address offset: 0x14 */
-uint32_t	 	 S0PAR;	 /*!< DMA stream 0 peripheral address register, Address offset: 0x18 */
-uint32_t 		 S0M0AR; /*!< DMA stream 0 memory 0 address register,   Address offset: 0x1C */
-uint32_t 		 S0M1AR; /*!< DMA stream 0 memory 1 address register,   Address offset: 0x20 */
-DMA_SxFCR_Reg_t	 S0FCR;  /*!< DMA stream 0 FIFO control register,  	    Address offset: 0x24 */
-DMA_SxCR_Reg_t	 S1CR;	 /*!< DMA stream 1 configuration register, 	  	Address offset: 0x28 */
-DMA_SxNDTR_Reg_t S1NDTR; /*!< DMA stream 1 number of data register,   	Address offset: 0x2C */
-uint32_t	 	 S1PAR;	 /*!< DMA stream 1 peripheral address register, Address offset: 0x30 */
-uint32_t 		 S1M0AR; /*!< DMA stream 1 memory 0 address register,   Address offset: 0x34 */
-uint32_t 		 S1M1AR; /*!< DMA stream 1 memory 1 address register,   Address offset: 0x38 */
-DMA_SxFCR_Reg_t	 S1FCR;  /*!< DMA stream 1 FIFO control register,  	    Address offset: 0x3C */
-DMA_SxCR_Reg_t	 S2CR;	 /*!< DMA stream 2 configuration register, 	  	Address offset: 0x40 */
-DMA_SxNDTR_Reg_t S2NDTR; /*!< DMA stream 2 number of data register,   	Address offset: 0x44 */
-uint32_t	 	 S2PAR;	 /*!< DMA stream 2 peripheral address register, Address offset: 0x48 */
-uint32_t 		 S2M0AR; /*!< DMA stream 2 memory 0 address register,   Address offset: 0x4C */
-uint32_t 		 S2M1AR; /*!< DMA stream 2 memory 1 address register,   Address offset: 0x50 */
-DMA_SxFCR_Reg_t	 S2FCR;  /*!< DMA stream 2 FIFO control register,  	    Address offset: 0x54 */
-DMA_SxCR_Reg_t	 S3CR;	 /*!< DMA stream 3 configuration register, 	  	Address offset: 0x58 */
-DMA_SxNDTR_Reg_t S3NDTR; /*!< DMA stream 3 number of data register,   	Address offset: 0x5C */
-uint32_t	 	 S3PAR;	 /*!< DMA stream 3 peripheral address register, Address offset: 0x60 */
-uint32_t 		 S3M0AR; /*!< DMA stream 3 memory 0 address register,   Address offset: 0x64 */
-uint32_t 		 S3M1AR; /*!< DMA stream 3 memory 1 address register,   Address offset: 0x68 */
-DMA_SxFCR_Reg_t	 S3FCR;  /*!< DMA stream 3 FIFO control register,  	    Address offset: 0x6C */
-DMA_SxCR_Reg_t	 S4CR;	 /*!< DMA stream 4 configuration register, 	  	Address offset: 0x70 */
-DMA_SxNDTR_Reg_t S4NDTR; /*!< DMA stream 4 number of data register,   	Address offset: 0x74 */
-uint32_t	 	 S4PAR;	 /*!< DMA stream 4 peripheral address register, Address offset: 0x78 */
-uint32_t 		 S4M0AR; /*!< DMA stream 4 memory 0 address register,   Address offset: 0x7C */
-uint32_t 		 S4M1AR; /*!< DMA stream 4 memory 1 address register,   Address offset: 0x80 */
-DMA_SxFCR_Reg_t	 S4FCR;  /*!< DMA stream 4 FIFO control register,  	    Address offset: 0x84 */
-DMA_SxCR_Reg_t	 S5CR;	 /*!< DMA stream 5 configuration register, 	  	Address offset: 0x88 */
-DMA_SxNDTR_Reg_t S5NDTR; /*!< DMA stream 5 number of data register,   	Address offset: 0x8C */
-uint32_t	 	 S5PAR;	 /*!< DMA stream 5 peripheral address register, Address offset: 0x90 */
-uint32_t 		 S5M0AR; /*!< DMA stream 5 memory 0 address register,   Address offset: 0x94 */
-uint32_t 		 S5M1AR; /*!< DMA stream 5 memory 1 address register,   Address offset: 0x98 */
-DMA_SxFCR_Reg_t	 S5FCR;  /*!< DMA stream 5 FIFO control register,  	    Address offset: 0x9C */
-DMA_SxCR_Reg_t	 S6CR;	 /*!< DMA stream 6 configuration register,	   	Address offset: 0xA0 */
-DMA_SxNDTR_Reg_t S6NDTR; /*!< DMA stream 6 number of data register,    	Address offset: 0xA4 */
-uint32_t	 	 S6PAR;	 /*!< DMA stream 6 peripheral address register, Address offset: 0xA8 */
-uint32_t 		 S6M0AR; /*!< DMA stream 6 memory 0 address register,   Address offset: 0xAC */
-uint32_t 		 S6M1AR; /*!< DMA stream 6 memory 1 address register,   Address offset: 0xB0 */
-DMA_SxFCR_Reg_t	 S6FCR;  /*!< DMA stream 6 FIFO control register,  	    Address offset: 0xB4 */
-DMA_SxCR_Reg_t	 S7CR;	 /*!< DMA stream 7 configuration register, 	  	Address offset: 0xB8 */
-DMA_SxNDTR_Reg_t S7NDTR; /*!< DMA stream 7 number of data register,   	Address offset: 0xBC */
-uint32_t	 	 S7PAR;	 /*!< DMA stream 7 peripheral address register, Address offset: 0xC0 */
-uint32_t 		 S7M0AR; /*!< DMA stream 7 memory 0 address register,   Address offset: 0xC4 */
-uint32_t 		 S7M1AR; /*!< DMA stream 7 memory 1 address register,   Address offset: 0xC8 */
-DMA_SxFCR_Reg_t	 S7FCR;  /*!< DMA stream 7 FIFO control register,  	    Address offset: 0xCC */
 }DMA_RegDef_t;
 
 /**
